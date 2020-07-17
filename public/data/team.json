@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Nome do Membro",
+    "job": "Cargo",
+    "image": "/assets/team/placeholder.jpg"
+  },
+  {
+    "name": "Membro",
+    "job": "Cargo",
+    "image": "/assets/team/placeholder.jpg"
+  },
+  {
+    "name": "Membro",
+    "job": "Cargo",
+    "image": "/assets/team/placeholder.jpg"
+  }
+]

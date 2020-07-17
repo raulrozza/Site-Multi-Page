@@ -1,0 +1,62 @@
+INSTRUÇÕES SOBRE COMO ALTERAR OS DADOS
+
+Cada arquivo .json é uma estrutura de dados que contém algumas informações que são mostradas no site. Eles podem ser editados,
+mas para garantir que nada dará errado, siga essas diretrizes.
+
+DIRETRIZES GERAIS PARA MEXER NOS ARQUIVOS
+
+Quase todos os dados estão envolvidos por chaves {} e/ou colchetes []. É necessário que sempre que uma chave/colchete seja aberta, ela também seja
+fechada.
+
+Cada propriedade e valor deve estar envolta por aspas duplas "". Não use aspas simples ou crase.
+
+Os vetores são estruturas que aceitam diversos itens, e são as envolvidas por []. Os objetos são estruturas que aceitam diversas propriedades, e
+são envolvidos por {}. Sempre que você for adicionar mais de um item ou propriedade, você deve separá-los por vírgula, por exemplo:
+[ 1, 2, "meu nome" ]
+{ "nome": "Caltech", "universidade": "UFSC" }
+O último elemento do vetor/objeto não possui vírgula a direita.
+
+Para ter certeza que seu arquivo JSON está correto, antes de atualizar de fato no site, use um validador de json para checar.
+Copie seu conteúdo e entre em https://jsonlint.com/, cole o conteúdo lá e veja se não contém erros. Qualquer dúvida, pode chamar a gente que ajudamos.
+
+INFORMAÇÕES SOBRE OS ARQUIVOS
+
+about.json:
+
+  Este arquivo define a Missão, Visão e Valores mostrados na página /about. Para editá-las, apenas troque os textos entre aspas.
+  Não modifique nenhum outro item, ou adicione/remova itens. Tenha certeza de que todos os dados estão envoltos entre chaves {}
+
+homeCarousel.json
+
+  Este arquivo define quais são as imagens mostradas na página inicial, junto com seus textos. Você pode adicionar ou remover itens
+  como desejar, mas atente-se a alguns cuidados:
+
+  Este arquivo contém um VETOR, ou seja: Cada item entre chaves {} ali dentro representa uma nova imagem no carrossel. Cada imagem possui
+  duas propriedades: text e image. A propriedade text é o texto que fica por cima da imagem. A propridade image contém URL da imagem que será
+  mostrada. Antes de adicionar/remover/editar, entre na pasta assets/homeCarousel e modifique sua imagem lá.
+  A URL da imagem deve ser sempre "/assets/homeCarousel/NOME_DA_SUA_IMAGEM.formato". Apenas faça diferente se você souber bem o que está fazendo.
+
+portfolio.json
+  Este arquivo define quais são os projetos mostrados na página /portfolio. Você pode adicionar ou remover itens como desejar.
+
+  Assim como o anterior, este arquivo contém um vetor de dados. Cada objeto (item entre {}) possui quatro propriedades:
+  - title: O nome do cliente, que aparece bem grande em amarelo. Não precisa estar em caixa alta (o site cuida disso sozinho).
+  - description: A breve descrição do case, que ficará logo abaixo do nome.
+  - image: A URL da imagem. Salve suas imagens em assets/portfolio, e depois coloque nesta propriedade o valor
+    "/assets/portfolio/NOME_DA_SUA_IMAGEM.formato". Cuidado para não mudar a estrutura de pastas e etc, a menos que você saiba o que está fazendo.
+  - legend: O texto que aparecerá por cima da imagem. Pode ser o nome do case, slogan, o que você quiser :)
+
+team.json
+  Este arquivo contém os dados dos membros da Caltech que aparecerão na página /about.
+
+  Este arquivo também é um vetor, e cada objeto no vetor contém as seguintes propriedades:
+  - name: Nome do membro. Aparece quando você passa o mouse por cima da foto (ou toca nela, na versão mobile)
+  - job: O cargo que ocupa na EJ. É claro que você pode trocar essa informação por absolutamente qualquer coisa, não precisa se prender ao cargo.
+    Este é o texto que aparece quando você passa o mouse por cima da foto. Importante que, independente de qual tipo de informação você queira
+    mostrar no lugar, o nome da propriedade ainda precisa ser JOB.
+  - image: A URL da foto do membro.Salve suas imagens em assets/team, e depois coloque nesta propriedade o valor
+    "/assets/team/NOME_DA_SUA_IMAGEM.formato". Novamente, cuidado ao mexer com os dados para evitar probleminhas.
+
+Qualquer dúvida, pode chamar o Super Esquadrão da EJEC que nós auxiliamos você!
+
+Entre em contato em ejec.ufsc.br, pelo Slack, etc.
